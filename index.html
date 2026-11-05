@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenStudy - Student Productivity</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <h1>OpenStudy</h1>
+        <p>Your personal student productivity space</p>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h2>Bienvenue sur OpenStudy 👋</h2>
+            <p>Organisez vos études, gérez vos tâches et atteignez vos objectifs.</p>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <h3>Total des tâches</h3>
+                <p id="totalTasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Tâches terminées</h3>
+                <p id="completedTasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Tâches restantes</h3>
+                <p id="remainingTasks">0</p>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <h2>Ajouter une tâche</h2>
+
+            <form id="taskForm">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Nom de la tâche..."
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="subjectInput"
+                    placeholder="Matière..."
+                >
+
+                <input type="date" id="dateInput">
+
+                <button type="submit">Ajouter</button>
+            </form>
+        </section>
+
+        <section class="task-section">
+            <h2>Mes tâches</h2>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Toutes</button>
+                <button class="filter-btn" data-filter="pending">En cours</button>
+                <button class="filter-btn" data-filter="completed">Terminées</button>
+            </div>
+
+            <div id="taskList">
+                <p class="empty-message">Aucune tâche pour le moment.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>OpenStudy © 2026 — Open Source Project</p>
+    </footer>
+
+</body>
+</html>
